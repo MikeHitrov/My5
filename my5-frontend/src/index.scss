@@ -1,0 +1,124 @@
+@import './colors.scss';
+
+$theme-colors: (
+  "primary": $primary-color,
+);
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/progress";
+
+html{
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.folder{
+  color: #f7d162;
+  filter: drop-shadow(1px 2px 3px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file{
+  color: $primary-color;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-other{
+  color: #95b5b5;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-image{
+  color: #67a3c8;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-word{
+  color: #0277bd;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-excel{
+  color: #217345;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-powerpoint{
+  color: #d64d2b;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-pdf{
+  color: #d14339;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-code{
+  color: #0aa384;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-alt{
+  color: #000000;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-archive{
+  color: #81c784;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-audio{
+  color: #7283a7;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.file-video{
+  color: #37474f;
+  filter: drop-shadow(1px 2px 2px #222);
+  filter: progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#222', Positive='true');
+}
+
+.font-15{
+  font-size: 1.5rem;
+}

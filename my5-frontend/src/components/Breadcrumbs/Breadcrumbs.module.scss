@@ -1,0 +1,17 @@
+@import '../../colors.scss';
+
+.crumb{
+  transition: color 0.3s;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.crumb:hover:not(.active){ 
+  color: $primary-color !important;
+  transition: color 0.3s;
+}
+
+.active{
+  color: $disabled-color;
+  cursor: default;
+}
