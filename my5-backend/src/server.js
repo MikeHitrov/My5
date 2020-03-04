@@ -1,0 +1,1 @@
+module.exports = text => console.log(text + ' - Babel ES6 Demo')
