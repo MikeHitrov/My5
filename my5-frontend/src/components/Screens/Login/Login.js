@@ -16,6 +16,10 @@ const Login = () => {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
+<<<<<<< HEAD
+=======
+    console.log(process.env.REACT_APP_API)
+>>>>>>> 7956183d54df45bce15b31ba6400274422f30a71
     const res = await fetch(process.env.REACT_APP_API + '/login', {
       method: 'POST',
       headers,
