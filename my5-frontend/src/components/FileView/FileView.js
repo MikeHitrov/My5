@@ -3,32 +3,13 @@ import styles from './FileView.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HoverIcons from './HoverIcons';
 
-/*
-try {
-		    ${const genImage = async () => {
-			imageIcon = await imageThumbnail(text, imageOptions)}
-			{imageIcon}
-		}
-		} catch (err) {
-			<FontAwesomeIcon
-						icon={iconType}
-						size="6x"
-						className={`mx-auto d-block ${fType === 'dir' ? 'folder' : fileColor}`}
-					  />
-		}
-
-*/
-
-const FileView = ({ type, text, onDeleteAction, className, ...props }) => {
+const FileView = ({ type, text, onDeleteAction, onShareAction, currentPath, file, className, ...props }) => {
   const [hover, setHover] = useState(false);
   const fType = type.toLowerCase();
-  /*
-  const imageThumbnail = require('image-thumbnail');
-  let imageOptions = { width: 100, height: 100, responseType: 'base64' }
-  */
+ 
   let iconType = '';
   let fileColor = '';
-  let imageIcon = false;
+  let icon;
 
   if (fType === 'dir') {
     iconType = 'folder'
@@ -81,6 +62,15 @@ const FileView = ({ type, text, onDeleteAction, className, ...props }) => {
         fileColor = 'file-other'
         break;
     }
+
+    if(iconType === 'file-image'){
+      icon = <img src={process.env.REACT_APP_API + currentPath + '/' + file} alt="Image preview" style="width:1o0px; height: 100px"></img>
+    } else {
+      icon = <FontAwesomeIcon
+			icon={iconType}
+			size="6x"
+			className={`mx-auto d-block ${fType === 'dir' ? 'folder' : fileColor}`}/>
+    }
   }
   return (
     <>
@@ -91,12 +81,11 @@ const FileView = ({ type, text, onDeleteAction, className, ...props }) => {
         className={`rounded position-relative pt-2 ${styles.box} ${
           !!className ? className : ''
           }`}>
-        {hover && <HoverIcons deleteAction={onDeleteAction} />}
-	    <FontAwesomeIcon
-			icon={iconType}
-			size="6x"
-			className={`mx-auto d-block ${fType === 'dir' ? 'folder' : fileColor}`}
-		/>
+          {hover && <HoverIcons deleteAction={onDeleteAction} />}
+          {hover && <HoverIcons shareAction={onShareAction} />}
+
+          {icon}
+
         <div className={`${styles.bottomHalf} mt-2`}>
           <p className={`text-center ${styles.text}`}>{text}</p>
         </div>

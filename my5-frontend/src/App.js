@@ -33,7 +33,8 @@ import {
   faFileVideo,
   faFileArchive,
   faFileAudio,
-  faFileAlt
+  faFileAlt,
+  faShareAltSquare,
 } from '@fortawesome/free-solid-svg-icons';
 library.add(
   faUser, 
@@ -56,7 +57,8 @@ library.add(
   faFileVideo,
   faFileArchive,
   faFileAudio,
-  faFileAlt
+  faFileAlt,
+  faShareAltSquare,
 );
 
 const httpLink = new HttpLink({ uri: process.env.REACT_APP_API + '/graphql' });

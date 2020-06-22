@@ -74,6 +74,8 @@ const FileExplorer = ({
               onDeleteAction={() => deleteAction(child.name, child.type)}
               type={child.type}
               text={child.name}
+              currentPath={currentPath}
+              file={file}
             />
           </div>
         </Col>
