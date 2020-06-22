@@ -21,6 +21,14 @@ const app = express();
 app.set('trust proxy', true);
 const port = process.env.PORT;
 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+  });
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, process.env.FILE_UPLOAD_DIR);
