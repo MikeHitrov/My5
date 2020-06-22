@@ -3,7 +3,6 @@ import styles from './FileView.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import HoverIcons from './HoverIcons';
 
-<<<<<<< HEAD
 const FileView = ({ type, text, onDeleteAction, onShareAction, currentPath, file, className, ...props }) => {
   const [hover, setHover] = useState(false);
   const fType = type.toLowerCase();
@@ -11,34 +10,6 @@ const FileView = ({ type, text, onDeleteAction, onShareAction, currentPath, file
   let iconType = '';
   let fileColor = '';
   let icon;
-=======
-/*
-try {
-		    ${const genImage = async () => {
-			imageIcon = await imageThumbnail(text, imageOptions)}
-			{imageIcon}
-		}
-		} catch (err) {
-			<FontAwesomeIcon
-						icon={iconType}
-						size="6x"
-						className={`mx-auto d-block ${fType === 'dir' ? 'folder' : fileColor}`}
-					  />
-		}
-
-*/
-
-const FileView = ({ type, text, onDeleteAction, className, ...props }) => {
-  const [hover, setHover] = useState(false);
-  const fType = type.toLowerCase();
-  /*
-  const imageThumbnail = require('image-thumbnail');
-  let imageOptions = { width: 100, height: 100, responseType: 'base64' }
-  */
-  let iconType = '';
-  let fileColor = '';
-  let imageIcon = false;
->>>>>>> 7956183d54df45bce15b31ba6400274422f30a71
 
   if (fType === 'dir') {
     iconType = 'folder'
